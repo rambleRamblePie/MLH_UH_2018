@@ -53,7 +53,7 @@ class App extends Component {
                   <div class="midForm">
                 <label htmlFor="suggestedDest">Suggested Destinations:</label>
                 <ButtonToolbar>
-                    <Button bsStyle="info">Suggestion1</Button>
+                    <Button>Suggestion1</Button>
                     <Button>Suggestion2</Button>
                     <Button>Suggestion3</Button>
                     <Button>Suggestion4</Button>
