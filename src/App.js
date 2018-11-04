@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {Button} from 'react-bootstrap';
+import {ButtonToolbar} from 'react-bootstrap';
 
 import DatePicker from "react-datepicker";
 import moment from "moment";
@@ -48,6 +50,17 @@ class App extends Component {
                   </div>
 
                   <p></p>
+                  <div class="midForm">
+                <label htmlFor="suggestedDest">Suggested Destinations:</label>
+                <ButtonToolbar>
+                    <Button bsStyle="info">Suggestion1</Button>
+                    <Button>Suggestion2</Button>
+                    <Button>Suggestion3</Button>
+                    <Button>Suggestion4</Button>
+                    <Button>Suggestion5</Button>
+                </ButtonToolbar>
+                <p></p>
+              </div>
               <div class="bottomForm">
                   <label htmlFor="departureDate">Departure Date:</label>
                   <DatePicker
@@ -58,6 +71,7 @@ class App extends Component {
                       onChange={this.handleChangeStart}
                   />
               </div>
+              
               <div class="bottomForm">
                   <label htmlFor="returnDate">Return Date:</label>
                   <DatePicker id={"returnDateSelector"}
