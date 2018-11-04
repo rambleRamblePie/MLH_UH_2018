@@ -12,7 +12,7 @@
       #map {
         height: 100%;
         width: 100%;
-        min-height: 700px;
+        min-height: 750px;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -25,24 +25,38 @@
   <body>
     <div class="container-fluid">
         <div class="row">
-          <div class="col-xs-5 col-md-3">
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-secondary">One Way</button>
-                <button type="button" class="btn btn-secondary">Round Trip</button>
+          <div class="col-xs-5 col-md-3 pt-4 bg-dark text-white">
+            <div class="text-center">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-secondary active">
+                <input type="radio" name="options" id="oneway" autocomplete="off" checked> One Way
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="roundtrip" autocomplete="off"> Round Trip
+              </label>
             </div>
-            <form>
-                <div class="form-row">
-                  <div class="col">
-                    <label for="exampleInputEmail1">Origin</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Where from?">
-                  </div>
-                  <div class="col">
-                    <label for="exampleInputPassword1">Destination</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Where to?">
-                  </div>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
+            </div>
+            <form class="pt-2">
+              <div class="mb-2">
+                <label for="inputOrigin">Origin</label>
+                <input type="text" class="form-control" id="inputOrigin" placeholder="Where from?">
+              </div>
+                <label for="exampleInputPassword1">Destination</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Where to?">
+              <div class="input-group date">
+                <input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                <script>
+                $('#sandbox-container .input-group.date').datepicker({
+                  startDate: "today",
+                  todayBtn: "linked",
+                  todayHighlight: true
+                });
+                </script>
+              </div>
+              <div class="pt-2">
+                <button type="submit" class="btn btn-primary btn-block">Get Flights</button>
+              </div>
+            </form>
           </div>
           <div class="col-xs-7 col-md-9" id="map"></div>
         </div>
