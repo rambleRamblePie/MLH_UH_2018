@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import DatePicker from "react-datepicker";
 import moment from "moment";
 
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 import "react-datepicker/dist/react-datepicker.css";
@@ -32,6 +32,7 @@ class App extends Component {
     }
 
   render() {
+
     return (
       <div className="App">
         <header className="App-header">
@@ -70,7 +71,13 @@ class App extends Component {
                       // placeholderText="Select a date other than today or yesterday"
                   />
               </div>
+              <div className="bottomForm">
+                  <input type="radio" name="tripType" value="roundtrip" checked/>
+                  <label htmlFor="tripType">Roundtrip</label>
+                  <input type="radio" name="tripType" value="oneway"/>
+                  <label htmlFor="tripType">One-Way</label>
 
+              </div>
 
               <div class="button">
                   <button type="submit"> Find Lowest Prices</button>
